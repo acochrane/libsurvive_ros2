@@ -41,7 +41,7 @@ add_compile_options(-Wall -Wextra -Wpedantic)
 include(ExternalProject)
 externalproject_add(libsurvive
   GIT_REPOSITORY https://github.com/cntools/libsurvive.git
-  GIT_TAG master
+  GIT_TAG ec902cc048baecbca3d704482d3923bdb84a1e7d
   PATCH_COMMAND echo "sed -i 's/, tan$/, tan, Abs/' src/generated/common_math.py" \> patch && bash patch
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/libsurvive-install
